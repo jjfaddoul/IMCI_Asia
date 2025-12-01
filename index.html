@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMCI Asia - Software Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">IMCI Asia</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Welcome to IMCI Asia</h1>
+                <p class="hero-subtitle">Showcasing Innovative Software Solutions</p>
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+            </div>
+        </section>
+
+        <section id="about" class="about section">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>IMCI Asia is dedicated to developing innovative software solutions that address real-world challenges. Our portfolio showcases a collection of projects that demonstrate our commitment to quality, innovation, and user-centered design.</p>
+            </div>
+        </section>
+
+        <section id="projects" class="projects section">
+            <div class="container">
+                <h2>Our Projects</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">Project 1</div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Healthcare Management System</h3>
+                            <p>A comprehensive solution for managing healthcare facilities, patient records, and medical workflows.</p>
+                            <div class="project-tags">
+                                <span class="tag">Healthcare</span>
+                                <span class="tag">Web App</span>
+                                <span class="tag">Database</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">Project 2</div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Data Analytics Platform</h3>
+                            <p>Advanced analytics tools for processing and visualizing complex datasets with intuitive dashboards.</p>
+                            <div class="project-tags">
+                                <span class="tag">Analytics</span>
+                                <span class="tag">Visualization</span>
+                                <span class="tag">Big Data</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">Project 3</div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Mobile Health App</h3>
+                            <p>A mobile application designed to improve patient engagement and health monitoring on the go.</p>
+                            <div class="project-tags">
+                                <span class="tag">Mobile</span>
+                                <span class="tag">iOS</span>
+                                <span class="tag">Android</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">Project 4</div>
+                        </div>
+                        <div class="project-content">
+                            <h3>API Integration Hub</h3>
+                            <p>A centralized platform for managing and orchestrating API integrations across multiple systems.</p>
+                            <div class="project-tags">
+                                <span class="tag">API</span>
+                                <span class="tag">Integration</span>
+                                <span class="tag">Microservices</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact section">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <p>Interested in learning more about our projects or collaborating with us?</p>
+                <a href="mailto:contact@imciasia.com" class="btn btn-primary">Contact Us</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 IMCI Asia. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', !isExpanded);
+            navLinks.classList.toggle('nav-open');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.setAttribute('aria-expanded', 'false');
+                navLinks.classList.remove('nav-open');
+            });
+        });
+    </script>
+</body>
+</html>
