@@ -1,49 +1,62 @@
-# IMCI Asia — GitHub Pages Site
+# IMCI ASIA — Website
 
-This repository hosts the IMCI Asia website using GitHub Pages. The site is a simple, static build with a dark, modern theme suitable for a software company specializing in Critical Operational Software.
+A lightweight static website for IMCI ASIA, built for GitHub Pages.
+
+## Pages
+- `index.html`: Futuristic dark-mode homepage with centered logo, title, subtitle, and three buttons: `Projects`, `About`, `Contact`.
+- `projects.html`: Two project cards with title, partner, description, screenshot, and a left-aligned `Learn more` button in a card footer. Partner logos appear right-aligned in the footer.
+- `about.html`: Simple overview stating we are a value-driven software company founded in Singapore, with additional context. Includes a button to the founder’s website (placeholder URL).
+- `contact.html`: Shows company address and an email link/button.
 
 ## Structure
-- `docs/` — site root used by GitHub Pages
-	- `index.html` — homepage
-	- `projects/template.html` — project page template
-	- `styles/main.css` — global styles
-	- `scripts/main.js` — small JS for theme toggle and year
-	- `assets/` — icons and placeholders
-
-## Enable GitHub Pages
-1. Push the `main` branch to GitHub.
-2. In the repository settings, open “Pages”.
-3. Under “Build and deployment” set:
-	 - Source: `Deploy from a branch`
-	 - Branch: `main`
-	 - Folder: `/docs`
-4. Save. Your site will be available at the repository’s Pages URL.
-
-## Add a Project Page
-1. Duplicate `docs/projects/template.html` and rename, e.g. `docs/projects/disaster-monitoring.html`.
-2. Edit the content: title, description, outcomes, facts, and screenshots.
-3. Add a card to the homepage grid in `docs/index.html`:
-	 ```html
-	 <a class="card project-card" href="./projects/disaster-monitoring.html">
-		 <div class="card-media">
-			 <img src="./assets/placeholder-1.svg" alt="Disaster Monitoring thumbnail" />
-		 </div>
-		 <div class="card-content">
-			 <h3>Disaster Monitoring</h3>
-			 <p>High-availability monitoring and alerting for critical events.</p>
-			 <span class="chip">Reliability</span>
-		 </div>
-	 </a>
-	 ```
-
-## Local Preview
-You can preview the site locally with a static server:
-
-```zsh
-python3 -m http.server -d "docs" 8000
-# Open http://localhost:8000
+```
+assets/
+	css/
+		style.css          # Global styles and page layouts
+	images/
+		bg.jpg             # Site background image
+		header_logo.png    # Header brand logo (if used)
+		main_logo.png      # Homepage hero logo
+	screenshots/
+		1_main.png         # Project 1 screenshot
+		2_main.png         # Project 2 screenshot
+		1_logo.jpg         # Project 1 partner logo
+		2_logo.png         # Project 2 partner logo
+404.html               # Optional GitHub Pages 404 stub
+index.html             # Homepage
+projects.html          # Projects page
+about.html             # About page
+contact.html           # Contact page
 ```
 
+## Design
+- Dark, high-contrast UI with neon green accents, glass-like surfaces, soft shadows.
+- Responsive layouts for mobile and desktop (cards become single-column on small screens).
+- Background image (`assets/images/bg.jpg`) with cover sizing.
+
+## Editing Content
+- Homepage text: edit in `index.html`.
+- Projects:
+	- Update titles, partners, and descriptions in `projects.html`.
+	- Replace screenshots/logos in `assets/screenshots/` and keep filenames or update paths.
+	- Buttons currently point to `#`; set real links if available.
+- About: update paragraphs and founder URL in `about.html` (replace `https://example.com`).
+- Contact: replace address and `contact@example.com` in `contact.html`.
+
+## Local Preview
+Open `index.html` directly in your browser, or serve the folder:
+
+```sh
+# From the repository root
+python3 -m http.server 8080
+# Then visit http://localhost:8080/
+```
+
+## GitHub Pages
+- Ensure the repository is public (or use GitHub Pages for private with a paid plan).
+- In Settings → Pages, set Source to `main` and folder to `/ (root)`.
+- Your site will be available at `https://<username>.github.io/<repo>/`.
+
 ## Notes
-- The theme toggle stays in the dark palette, subtly changing accents.
-- To customize branding, update the logo text in the header and `assets/favicon.svg`.
+- Nav links are wired between pages (`Projects`, `About`, `Contact`).
+- Images are referenced relative to the CSS/HTML locations; keep paths consistent if relocating assets.
