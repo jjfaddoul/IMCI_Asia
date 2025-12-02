@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#121820"/>
+      <stop offset="1" stop-color="#0b0f14"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#g2)"/>
+  <g fill="none" stroke="#9fb0c3" stroke-width="2" opacity="0.5">
+    <rect x="80" y="80" width="640" height="290" rx="12"/>
+    <line x1="80" y1="130" x2="720" y2="130"/>
+    <line x1="80" y1="180" x2="720" y2="180"/>
+    <line x1="80" y1="230" x2="720" y2="230"/>
+  </g>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Inter, system-ui" font-size="24" fill="#9fb0c3">Screenshot Placeholder</text>
+</svg>
